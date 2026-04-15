@@ -19,7 +19,14 @@
   html { scroll-behavior:smooth; }
   body { background:var(--navy); color:var(--white); font-family:'Lato',sans-serif; overflow-x:hidden; cursor:none; }
 
-  
+   /* ── cursor ── */
+  #cursor {
+    width:16px; height:16px;
+    border:2px solid var(--gold); border-radius:50%;
+    position:fixed; top:0; left:0; pointer-events:none;
+    transition:transform .15s ease; z-index:9999;
+    transform:translate(-50%,-50%);
+  }
 
   /* ══ NAV ══ */ 
   nav {
@@ -306,7 +313,7 @@
   .tl-title { font-family:'Rajdhani',sans-serif; font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:8px; }
   .tl-text { font-size:.92rem; color:var(--muted); line-height:1.8; max-width:680px; }
 
-  /* ══ PLANES ══ 
+  /* ══ PLANES ══ */
   #planes { padding:110px 60px 80px; min-height:100vh; }
   .planes-intro { max-width:680px; margin-bottom:60px; }
   .planes-intro p { font-size:1rem; color:var(--muted); line-height:1.9; }
@@ -418,7 +425,7 @@
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home');return false;" id="nav-home" class="active">Inicio</a></li>
     <li><a href="#" onclick="showPage('profile');return false;" id="nav-profile">Perfil</a></li>
-    <li><a href="#" onclick="showPage('planes');return false;" id="nav-planes">Planes</a></li>
+    <!--<li><a href="#" onclick="showPage('planes');return false;" id="nav-planes">Planes</a></li>-->
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobile()" aria-label="Menú">
     <span></span><span></span><span></span>
@@ -765,7 +772,7 @@
     el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%,-50%) scale(2.2)');
     el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%,-50%) scale(1)');
   });
-
+   
   // nav scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
