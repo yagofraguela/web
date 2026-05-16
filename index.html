@@ -494,11 +494,66 @@
     body, .logo, .nav-links a, .mobile-menu a, .btn-primary, .btn-outline, .plan-btn, .cta-email { cursor: auto !important; }
     #cursor { display: none !important; }
   }
+
+  /* ── COOKIE BANNER ── */
+  #cookie-banner {
+    position:fixed; bottom:0; left:0; right:0; z-index:9000;
+    background:rgba(8,12,24,.97); border-top:1px solid var(--border);
+    backdrop-filter:blur(10px);
+    padding:16px 24px; display:flex; align-items:center;
+    justify-content:space-between; gap:16px; flex-wrap:wrap;
+    transform:translateY(100%); transition:transform .4s ease;
+  }
+  #cookie-banner.visible { transform:translateY(0); }
+  #cookie-banner p { font-size:.8rem; color:var(--muted); margin:0; line-height:1.6; max-width:700px; }
+  #cookie-banner a { color:var(--gold); text-decoration:underline; }
+  #cookie-banner-btns { display:flex; gap:10px; flex-shrink:0; }
+  .cookie-btn-accept {
+    background:var(--gold); color:var(--navy);
+    border:none; padding:8px 20px; font-family:'Rajdhani',sans-serif;
+    font-weight:700; font-size:.8rem; letter-spacing:2px;
+    text-transform:uppercase; cursor:pointer;
+  }
+  .cookie-btn-reject {
+    background:transparent; color:var(--muted);
+    border:1px solid var(--border); padding:8px 16px;
+    font-family:'Rajdhani',sans-serif; font-size:.8rem;
+    letter-spacing:2px; text-transform:uppercase; cursor:pointer;
+  }
+  .cookie-btn-reject:hover { color:var(--white); }
+
+  /* ── LEGAL PAGES ── */
+  .legal-page { max-width:800px; margin:0 auto; padding:110px 24px 80px; }
+  .legal-page h1 { font-family:'Bebas Neue',sans-serif; font-size:2.5rem; letter-spacing:3px; color:var(--white); margin-bottom:6px; }
+  .legal-page .legal-date { font-family:'Rajdhani',sans-serif; font-size:.75rem; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:40px; }
+  .legal-page h2 { font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:700; letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin:32px 0 10px; }
+  .legal-page p, .legal-page li { font-size:.92rem; color:var(--muted); line-height:1.9; margin-bottom:10px; }
+  .legal-page ul { padding-left:20px; margin-bottom:14px; }
+  .legal-page a { color:var(--gold); }
+  .legal-back { display:inline-flex; align-items:center; gap:8px; font-family:'Rajdhani',sans-serif; font-size:.8rem; letter-spacing:2px; color:var(--muted); text-transform:uppercase; cursor:pointer; margin-bottom:32px; background:none; border:none; padding:0; }
+  .legal-back:hover { color:var(--gold); }
+  @media(max-width:768px){ .legal-page { padding:90px 20px 60px; } }
+
+  /* FOOTER LEGAL LINKS */
+  .footer-legal { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:14px 24px; border-top:1px solid var(--border); }
+  .footer-legal a { font-family:'Rajdhani',sans-serif; font-size:.72rem; letter-spacing:1.5px; color:var(--muted); text-transform:uppercase; text-decoration:none; }
+  .footer-legal a:hover { color:var(--gold); }
+
 </style>
 </head>
 <body>
 
 <div id="cursor"></div>
+
+<div id="cookie-banner">
+  <p>Esta web usa <strong style="color:var(--white)">Google Fonts</strong> para mostrar tipografías, lo que implica una conexión a servidores de Google que puede registrar tu IP. No usamos cookies propias ni de rastreo. <a href="#" onclick="showPage('cookies-page');closeCookieBanner();return false;">Más información</a></p>
+  <div id="cookie-banner-btns">
+    <button class="cookie-btn-reject" onclick="closeCookieBanner()">Rechazar</button>
+    <button class="cookie-btn-accept" onclick="acceptCookies()">Aceptar</button>
+  </div>
+</div>
+
+
 
 <!-- MOBILE MENU -->
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobile()"></div>
@@ -602,7 +657,13 @@
         <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
       </div>
     </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+    <div class="footer-legal">
+    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+  </div>
+  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
   </footer>
 </div>
 
@@ -776,7 +837,13 @@
         <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
       </div>
     </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+    <div class="footer-legal">
+    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+  </div>
+  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
   </footer>
 </div>
 
@@ -873,7 +940,13 @@
         <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
       </div>
     </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+    <div class="footer-legal">
+    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+  </div>
+  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
   </footer>
 </div>
 
@@ -900,7 +973,7 @@
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    ['home','profile','planes'].forEach(k => {
+    ['home','profile','planes','aviso-legal','privacidad','cookies-page','condiciones'].forEach(k => {
       const d = document.getElementById('nav-'+k);
       const m = document.getElementById('mnav-'+k);
       if(d) d.classList.toggle('active', k===id);
@@ -926,6 +999,198 @@
     document.getElementById('mobileOverlay').classList.remove('open');
     document.body.style.overflow = '';
   }
+
+  // ── Cookie banner ──
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookie-banner').classList.remove('visible');
+  }
+  function closeCookieBanner() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    document.getElementById('cookie-banner').classList.remove('visible');
+  }
+  (function() {
+    if (!localStorage.getItem('cookieConsent')) {
+      setTimeout(() => document.getElementById('cookie-banner').classList.add('visible'), 800);
+    }
+  })();
 </script>
+
+<!-- AVISO LEGAL -->
+<div id="aviso-legal" class="page">
+  <div class="legal-page">
+    <button class="legal-back" onclick="showPage('home')">← Volver</button>
+    <h1>AVISO <span class="gold">LEGAL</span></h1>
+    <div class="legal-date">Última actualización: mayo 2025</div>
+    <h2>1. Titular del sitio web</h2>
+    <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se informa:</p>
+    <ul>
+      <li><strong style="color:var(--white)">Nombre:</strong> Caetano Xosé Horta Pombo</li>
+      <li><strong style="color:var(--white)">NIF:</strong> 46095648Z</li>
+      <li><strong style="color:var(--white)">Domicilio:</strong> Noia, A Coruña, España</li>
+      <li><strong style="color:var(--white)">Correo:</strong> <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a></li>
+      <li><strong style="color:var(--white)">Instagram:</strong> <a href="https://instagram.com/caaetano15" target="_blank">@caaetano15</a></li>
+    </ul>
+    <h2>2. Objeto y ámbito de aplicación</h2>
+    <p>El presente Aviso Legal regula el acceso y uso de este sitio web, titularidad de Caetano Xosé Horta Pombo. El acceso al sitio implica la aceptación plena de este Aviso Legal.</p>
+    <h2>3. Propiedad intelectual</h2>
+    <p>Todos los contenidos (textos, fotografías, imágenes, diseño) son propiedad de Caetano Xosé Horta Pombo o de terceros que han autorizado su uso. Queda prohibida su reproducción o distribución sin autorización escrita del titular.</p>
+    <h2>4. Responsabilidad</h2>
+    <p>El titular no se hace responsable de los daños derivados del uso del sitio web. Se reserva el derecho a modificar, suspender o eliminar el sitio sin previo aviso.</p>
+    <h2>5. Legislación aplicable</h2>
+    <p>Este Aviso Legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de A Coruña, con renuncia a cualquier otro fuero.</p>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
+      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
+        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+    </div>
+    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+  </footer>
+</div>
+
+<!-- PRIVACIDAD -->
+<div id="privacidad" class="page">
+  <div class="legal-page">
+    <button class="legal-back" onclick="showPage('home')">← Volver</button>
+    <h1>POLÍTICA DE <span class="gold">PRIVACIDAD</span></h1>
+    <div class="legal-date">Última actualización: mayo 2025</div>
+    <h2>1. Responsable del tratamiento</h2>
+    <ul>
+      <li><strong style="color:var(--white)">Identidad:</strong> Caetano Xosé Horta Pombo</li>
+      <li><strong style="color:var(--white)">NIF:</strong> 46095648Z</li>
+      <li><strong style="color:var(--white)">Contacto:</strong> <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a></li>
+    </ul>
+    <h2>2. Datos que se recogen</h2>
+    <p>Este sitio web no dispone de formularios de registro ni recoge datos de forma automática. Los únicos datos tratados son los que el usuario facilita voluntariamente al enviar un correo electrónico (nombre, dirección de correo y contenido del mensaje).</p>
+    <h2>3. Finalidad y base legal</h2>
+    <ul>
+      <li><strong style="color:var(--white)">Responder consultas:</strong> base legal — consentimiento del interesado (art. 6.1.a RGPD).</li>
+      <li><strong style="color:var(--white)">Gestionar servicios contratados:</strong> base legal — ejecución de contrato (art. 6.1.b RGPD).</li>
+    </ul>
+    <h2>4. Conservación de los datos</h2>
+    <p>Los datos se conservarán durante el tiempo necesario para atender la consulta o durante la vigencia de la relación contractual, y posteriormente los plazos legalmente establecidos.</p>
+    <h2>5. Destinatarios</h2>
+    <p>No se cederán datos a terceros salvo obligación legal. Los pagos son gestionados por <strong style="color:var(--white)">Stripe, Inc.</strong> bajo su propia política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a>.</p>
+    <h2>6. Derechos del interesado</h2>
+    <p>Puedes ejercer los derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición escribiendo a <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>. También puedes reclamar ante la <strong style="color:var(--white)">Agencia Española de Protección de Datos</strong>: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>.</p>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
+      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
+        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+    </div>
+    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+  </footer>
+</div>
+
+<!-- COOKIES -->
+<div id="cookies-page" class="page">
+  <div class="legal-page">
+    <button class="legal-back" onclick="showPage('home')">← Volver</button>
+    <h1>POLÍTICA DE <span class="gold">COOKIES</span></h1>
+    <div class="legal-date">Última actualización: mayo 2025</div>
+    <h2>1. ¿Qué son las cookies?</h2>
+    <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo para recordar preferencias o analizar el tráfico.</p>
+    <h2>2. Cookies utilizadas en este sitio</h2>
+    <p>Este sitio web <strong style="color:var(--white)">no instala cookies propias</strong> ni utiliza herramientas de análisis ni publicidad. Sin embargo, carga tipografías a través de <strong style="color:var(--white)">Google Fonts (fonts.googleapis.com)</strong>, lo que implica una conexión a servidores de Google que puede registrar la IP del usuario.</p>
+    <h2>3. Cookies de terceros</h2>
+    <ul>
+      <li><strong style="color:var(--white)">Google Fonts</strong> — Proveedor: Google LLC. Finalidad: mostrar las tipografías del sitio. Política: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      <li><strong style="color:var(--white)">Stripe</strong> (solo en páginas de pago) — Proveedor: Stripe, Inc. Finalidad: procesar pagos. Las páginas de pago se sirven desde el dominio de Stripe. Política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a></li>
+    </ul>
+    <h2>4. Cómo gestionar las cookies</h2>
+    <p>Puedes configurar tu navegador para bloquear o eliminar cookies:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+    </ul>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
+      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
+        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+    </div>
+    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+  </footer>
+</div>
+
+<!-- CONDICIONES -->
+<div id="condiciones" class="page">
+  <div class="legal-page">
+    <button class="legal-back" onclick="showPage('planes')">← Volver</button>
+    <h1>CONDICIONES DEL <span class="gold">SERVICIO</span></h1>
+    <div class="legal-date">Última actualización: mayo 2025</div>
+    <h2>1. Objeto</h2>
+    <p>Las presentes condiciones regulan la contratación de los servicios de asesoría técnica y planes de entrenamiento de remo ofrecidos por Caetano Xosé Horta Pombo (NIF: 46095648Z), con domicilio en Noia, A Coruña, España. Contacto: <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>.</p>
+    <h2>2. Servicios y precios</h2>
+    <ul>
+      <li><strong style="color:var(--white)">Asesorías Técnicas:</strong> 25 € / mes o 30 € por sesión individual. Incluye análisis de vídeo, ejercicios técnicos, ajustes del material y seguimiento básico.</li>
+      <li><strong style="color:var(--white)">Planes de Entrenamiento:</strong> 50 € / mes (precio para primeros usuarios). Plan mensual individualizado, feedback semanal y preparación de objetivos.</li>
+      <li><strong style="color:var(--white)">Plan Premium:</strong> 65 € / mes (precio para primeros usuarios). Incluye ambos servicios anteriores, análisis de vídeo ilimitado y planificación anual.</li>
+    </ul>
+    <h2>3. Proceso de contratación</h2>
+    <p>La contratación se realiza a través de los enlaces de pago habilitados (Stripe). El contrato se perfecciona al completar el pago. Recibirás una confirmación por correo electrónico.</p>
+    <h2>4. Precios e impuestos</h2>
+    <p>Los precios se expresan en euros (€). En caso de modificación de precios, se notificará con antelación suficiente.</p>
+    <h2>5. Derecho de desistimiento</h2>
+    <p>Conforme al Real Decreto Legislativo 1/2007 y la Directiva 2011/83/UE, el usuario tiene derecho a desistir del contrato en un plazo de <strong style="color:var(--white)">14 días naturales</strong> desde la contratación, sin necesidad de justificación, siempre que el servicio no haya comenzado a prestarse con el consentimiento expreso del usuario. Para ejercerlo: <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>.</p>
+    <h2>6. Obligaciones del usuario</h2>
+    <p>El usuario se compromete a facilitar información veraz sobre su nivel y condición física, y a comunicar cualquier lesión o limitación. Los planes están diseñados para personas sanas; consulta a un médico antes de iniciar si tienes dudas sobre tu salud.</p>
+    <h2>7. Propiedad intelectual de los contenidos</h2>
+    <p>Todos los planes, vídeos y materiales entregados son de uso exclusivo del contratante. Queda prohibida su reproducción, difusión o comercialización sin autorización escrita.</p>
+    <h2>8. Resolución de conflictos</h2>
+    <p>Para cualquier reclamación contacta en <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>. En caso de controversia, las partes se someten a los juzgados y tribunales de A Coruña (España).</p>
+  </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
+      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
+        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
+      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
+      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
+      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
+    </div>
+    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
+  </footer>
+</div>
+
 </body>
 </html>
