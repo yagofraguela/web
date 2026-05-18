@@ -139,6 +139,7 @@
     margin-bottom:16px; display:flex; align-items:center; gap:12px;
   }
   .hero-label::before { content:''; display:inline-block; width:36px; height:1px; background:var(--gold); }
+  .hero-service-tag { font-family:'Rajdhani',sans-serif; font-size:1rem; letter-spacing:4px; color:var(--white); text-transform:uppercase; font-weight:700; margin-bottom:10px; opacity:.88; display:block; }
   h1.hero-name {
     font-family:'Bebas Neue',sans-serif;
     font-size:clamp(3.5rem,9vw,8rem); line-height:.92;
@@ -450,6 +451,8 @@
     .gallery { grid-template-columns:1fr 1fr; grid-auto-rows:180px; gap:8px; }
     .gallery-item { height:auto; grid-row:span 1 !important; }
     .gallery-main { grid-row:span 1 !important; grid-column:span 2; }
+    .filosofia-planes-grid { grid-template-columns:1fr !important; }
+    .hero-service-tag { font-size:.72rem; letter-spacing:2px; }
 
     /* TIMELINE */
     .timeline { padding-left:20px; margin-bottom:50px; }
@@ -583,6 +586,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-label">Remero Olímpico Español</div>
+      <div class="hero-service-tag">Asesorías &amp; Planes de Entrenamiento</div>
       <h1 class="hero-name">CAETANO<br><span class="gold">HORTA</span><br>POMBO</h1>
       <div class="hero-bottom">
         <div class="hero-stats">
@@ -629,42 +633,14 @@
     </div>
   </section>
 
-  <section class="filosofia-section" style="padding:60px;background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-    <div style="max-width:1100px;margin:0 auto;">
-      <div class="section-title">FILOSOFÍA Y ENFOQUE DE <span style="color:var(--gold)">TRABAJO</span></div>
-      <div class="section-sub">Cómo trabajo contigo</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:16px;">
-        <div style="background:var(--card);border:1px solid var(--border);padding:32px;">
-          <div style="font-family:'Rajdhani',sans-serif;font-size:.75rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;">Asesorías Técnicas</div>
-          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;">Realizaré un análisis técnico de vídeo para identificar errores y aspectos de mejora en la ejecución de la palada. A partir de este análisis se detectarán fallos y carencias sobre las que trabajar mediante ejercicios específicos, nuevos ajustes en el bote o simplemente indicaciones para mejorar la conciencia técnica.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);padding:32px;">
-          <div style="font-family:'Rajdhani',sans-serif;font-size:.75rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;">Planes de Entrenamiento</div>
-          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:14px;">Seguiré las líneas generales de los entrenamientos que he aplicado en los últimos años de preparación hacia los Selectivos Nacionales y Campeonatos de España, incorporando matices y ajustes clave basados en mi experiencia como deportista de alto nivel.</p>
-          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:14px;">El proceso estará acompañado de un feedback constante para ajustar cargas, volúmenes y ejercicios según la evolución del atleta. Además, podremos preparar test específicos de ergómetro, regatas concretas y trabajar con una progresión que permita alcanzar picos de forma en los momentos más importantes de la temporada.</p>
-          <p style="font-size:.9rem;color:var(--white);line-height:1.7;font-weight:700;">CADA PLAN DE ENTRENAMIENTO SERÁ TOTALMENTE INDIVIDUALIZADO, ADAPTADO A LA DISPONIBILIDAD, LOS OBJETIVOS Y EL ESTADO FÍSICO DE CADA DEPORTISTA.</p>
-        </div>
-      </div>
+  <section style="padding:60px 40px;background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div style="max-width:900px;margin:0 auto;text-align:center;">
+      <div class="section-title">LAS RAÍCES DEL <span style="color:var(--gold)">PROYECTO</span></div>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.9;margin-top:24px;">Este proyecto nace con la ilusión de devolver al remo todo lo que este deporte me ha dado y enseñado a lo largo de mi carrera. Cada experiencia vivida, cada aprendizaje y cada metodología de entrenamiento que he experimentado han contribuido a construir una visión y una forma de trabajar propias.</p>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.9;margin-top:16px;">Hoy, todo ese conocimiento se reúne en un método creado para ayudar, acompañar y potenciar el crecimiento de cualquier remero que quiera seguir mejorando y alcanzar su mejor versión.</p>
     </div>
   </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-  </div>
-  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
+
 </div>
 
 
@@ -785,17 +761,17 @@
 
     <!-- HISTORIA / TIMELINE -->
     <div class="section-title">MI <span style="color:var(--gold)">HISTORIA</span></div>
-    <div class="section-sub">Del motocrós al olimpo del remo</div>
-    <div class="timeline">
+    <div class="section-sub">Del motocross al olimpo del remo</div>
+    ﻿<div class="timeline">
       <div class="tl-item">
         <div class="tl-year">15 de enero de 2003 — Noia, Galicia</div>
         <div class="tl-title">El inicio de todo</div>
-        <div class="tl-text">Nací en Noia, un municipio de la costa gallega con una larga tradición remera. Desde pequeño tuve una cosa clara: necesitaba la adrenalina. Y la encontré, al principio, sobre dos ruedas.</div>
+        <div class="tl-text">Nací en Noia, un municipio de la costa gallega con una larga tradición remera. Desde pequeño tuve una curiosidad innata por el deporte y la competición.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-year">~2008 — Motocrós</div>
+        <div class="tl-year">~2008 — Motocross</div>
         <div class="tl-title">La moto, mi primer amor</div>
-        <div class="tl-text">Antes de descubrir el agua, me apasionaba el motocrós. Competía y me iba bien. Esa mentalidad de riesgo controlado, de buscar la línea perfecta, sigue siendo parte de cómo entiendo el deporte y el entrenamiento.</div>
+        <div class="tl-text">Antes de descubrir el agua, me apasionaba el motocross. Esa mentalidad de riesgo controlado, de buscar la línea perfecta, y de manejar la presión desde tan pequeño ha sido clave para llegar hasta donde estoy hoy.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year">2012 — Primeras paladas</div>
@@ -805,17 +781,22 @@
       <div class="tl-item">
         <div class="tl-year">~2017 — CGTD Pontevedra</div>
         <div class="tl-title">El salto a la tecnificación deportiva</div>
-        <div class="tl-text">Admitido en el Centro Galego de Tecnificación Deportiva en tercero de la ESO, tuve que renunciar definitivamente al motocrós para compaginar estudios y alto rendimiento. No fue fácil, pero sabía que el remo era mi camino. Mi progresión allí fue meteórica.</div>
+        <div class="tl-text">Admitido en el Centro Galego de Tecnificación Deportiva en tercero de la ESO, tuve que renunciar definitivamente al motocross para compaginar estudios y alto rendimiento. No fue fácil, pero sabía que el remo era mi camino. Mi progresión allí fue meteórica.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2019 — Mundial Juvenil de Tokio</div>
+        <div class="tl-title">5º puesto en el mundo siendo cadete</div>
+        <div class="tl-text">En mi segundo año en categoría cadete conseguí un 5º puesto en el Mundial Juvenil de Tokio.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year">2020 — Primer oro europeo</div>
         <div class="tl-title">Campeón Europeo Juvenil</div>
-        <div class="tl-text">Con 17 años conquisté el oro en el Campeonato Europeo Juvenil en la prueba de Doble Scull. El mundo del remo europeo empezaba a escuchar mi nombre.</div>
+        <div class="tl-text">Con 17 años gané mi primera medalla internacional, conquistando el oro en el Campeonato Europeo Juvenil en la prueba de Doble Scull.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year">2021 — Tokio, Japón</div>
         <div class="tl-title">Mis primeros Juegos Olímpicos con 18 años</div>
-        <div class="tl-text">Mientras preparaba la selectividad, conseguí una plaza en los Juegos Olímpicos de Tokio junto a Manel Balasteguí. Compaginé los exámenes universitarios con la mayor cita deportiva del planeta. Terminamos séptimos con el diploma olímpico y una espinita clavada: queríamos más.</div>
+        <div class="tl-text">Mientras me preparaba para selectividad, conseguí una plaza en el Doble Scull ligero que participaría en los Juegos Olímpicos de Tokio, junto a Manel Balastegui. Terminamos séptimos, ganando una épica final B y llevándonos un Diploma Olímpico bajo el brazo.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year">2023 — Récord histórico</div>
@@ -823,35 +804,18 @@
         <div class="tl-text">Con 20 años batí el Récord de España de 2000 metros en peso ligero sobre el RowErg Concept2, con un tiempo de 6:06.9. Superé el anterior récord en 0,7 segundos y me convertí en el remero ligero más rápido de la historia nacional.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-year">2024 — París & Canadá</div>
+        <div class="tl-year">2024 — París &amp; Canadá</div>
         <div class="tl-title">Olimpiadas + Campeón del Mundo Sub-23</div>
-        <div class="tl-text">Un año de ensueño. En agosto participé en los Juegos Olímpicos de París, terminando octavo en Doble Scull Ligero. Semanas después, viajé a Canadá para el Mundial Sub-23 donde conquisté el oro en Single Scull. Un año histórico para cerrar una etapa y abrir otra.</div>
+        <div class="tl-text">Un año de ensueño. En agosto me hice con otro Diploma Olímpico en París y unas semanas después, viajé a Canadá para el Mundial Sub-23 donde conquisté el oro en Skiff Ligero. Un año histórico para cerrar una etapa y abrir otra.</div>
       </div>
       <div class="tl-item">
         <div class="tl-year">2025 — Shanghai, China</div>
         <div class="tl-title">Debut en absolutos: nuevo ciclo, nuevo reto</div>
-        <div class="tl-text">Con el ciclo olímpico hacia Los Ángeles 2028 recién comenzado, me integro en el equipo nacional absoluto en la modalidad de Cuatro Scull junto a Teixidor, Jofre y García. Participamos en el Campeonato Europeo de Plovdiv (Bulgaria), donde logramos un sólido 6.º puesto, y en el Campeonato del Mundo de Shanghai, donde nuestra remontada en la Final B nos da la 8.ª posición mundial. El equipo funciona. El camino hacia 2028 ha comenzado con fuerza.</div>
+        <div class="tl-text">Con el ciclo olímpico hacia Los Ángeles 2028 recién comenzado, me integro en el equipo nacional pesado en la modalidad de Cuatro Scull junto a Teixidor, Jofre y García. Participamos en el Campeonato del Mundo de Shanghai, donde nuestra remontada en la Final B nos da la 8ª posición mundial. El camino hacia LA2028 ha comenzado con fuerza.</div>
       </div>
     </div>
   </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-  </div>
-  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
+
 </div>
 
 
@@ -878,7 +842,7 @@
           <li>Ayuda con reglajes básicos del barco</li>
           <li>Seguimiento básico de progresión</li>
         </ul>
-        <a href="mailto:caetanohorta15@gmail.com?subject=Asesor%C3%ADas+T%C3%A9cnicas" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Asesor%C3%ADas+T%C3%A9cnicas" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card">
         <div class="plan-name">Planes de Entrenamiento</div>
@@ -891,7 +855,7 @@
           <li>Preparación específica para ergómetro (tips, intensidades, mentalidad...)</li>
           <li>Preparación de objetivos concretos (regatas y test de ergómetro)</li>
         </ul>
-        <a href="mailto:caetanohorta15@gmail.com?subject=Plan+de+Entrenamiento" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Plan+de+Entrenamiento" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge">⭐ Más popular</div>
@@ -906,9 +870,26 @@
           <li>Planificación anual completa</li>
           <li>Trato más personal</li>
         </ul>
-        <a href="mailto:caetanohorta15@gmail.com?subject=Plan+Premium" class="plan-btn plan-btn-filled">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Plan+Premium" class="plan-btn plan-btn-filled">Empezar ahora</a>
       </div>
     </div>
+<section style="margin:60px 0;padding:50px 40px;background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+      <div class="section-title" style="margin-bottom:6px;">FILOSOFÍA Y ENFOQUE DE <span style="color:var(--gold)">TRABAJO</span></div>
+      <div class="section-sub" style="margin-bottom:36px;">Cómo trabajo contigo</div>
+      <div class="filosofia-planes-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+        <div style="background:var(--card);border:1px solid var(--border);padding:32px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:2px;color:var(--gold);margin-bottom:18px;">ASESORÍAS TÉCNICAS</div>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;">Realizaré un análisis técnico de vídeo para identificar errores y aspectos de mejora en la ejecución de la palada. A partir de este análisis se detectarán fallos y carencias sobre las que trabajar mediante ejercicios específicos, nuevos ajustes en el bote o simplemente indicaciones para mejorar la conciencia técnica.</p>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);padding:32px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:2px;color:var(--gold);margin-bottom:18px;">PLANES DE ENTRENAMIENTO</div>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:14px;">Seguiré las líneas generales de los entrenamientos que he aplicado en los últimos años de preparación hacia los Selectivos Nacionales y Campeonatos de España, incorporando matices y ajustes clave basados en mi experiencia como deportista de alto nivel.</p>
+          <p style="font-size:.95rem;color:var(--muted);line-height:1.9;margin-bottom:14px;">El proceso estará acompañado de un feedback constante para ajustar cargas, volúmenes y ejercicios según la evolución del atleta. Además, podremos preparar test específicos de ergómetro, regatas concretas y trabajar con una progresión que permita alcanzar picos de forma en los momentos más importantes de la temporada.</p>
+          <p style="font-size:.9rem;color:var(--white);line-height:1.7;font-weight:700;">CADA PLAN DE ENTRENAMIENTO SERÁ TOTALMENTE INDIVIDUALIZADO, ADAPTADO A LA DISPONIBILIDAD, LOS OBJETIVOS Y EL ESTADO FÍSICO DE CADA DEPORTISTA.</p>
+        </div>
+      </div>
+    </section>
+
 
     <div class="otros-servicios" style="margin-top:70px;background:var(--card);border:1px solid var(--border);padding:36px;max-width:800px;margin-left:auto;margin-right:auto;text-align:center;">
       <div class="section-title" style="margin-bottom:10px;">OTROS <span style="color:var(--gold)">SERVICIOS</span></div>
@@ -920,41 +901,24 @@
     <div class="cta-section" style="margin-top:70px;">
       <h2>¿LISTO PARA EMPEZAR?</h2>
       <p>No dudes en contactar conmigo para poder resolverte cualquier duda.</p>
-      <a href="mailto:caetanohorta15@gmail.com" class="cta-email">caetanohorta15@gmail.com</a><br><br>
+      <a href="mailto:proyectocaetanohorta@gmail.com" class="cta-email">proyectocaetanohorta@gmail.com</a><br><br>
       <a href="https://instagram.com/caaetano15" target="_blank" class="btn-primary" style="display:inline-block;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.82rem;">Seguirme en Instagram</a>
     </div>
 
     <div class="section-title">PREGUNTAS <span style="color:var(--gold)">FRECUENTES</span></div>
     <div class="section-sub">Todo lo que necesitas saber antes de empezar</div>
     <div class="faq-grid">
-      <div class="faq-item"><div class="faq-q">¿Necesito experiencia previa en remo?</div><div class="faq-a">Para nada. El Plan Básico está pensado también para quienes empiezan. El entrenamiento se adapta a tu nivel actual, sea cual sea.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Puedo entrenar solo con ergómetro, sin barco?</div><div class="faq-a">Sí. Los planes incluyen versiones adaptadas para agua y para ergómetro en casa (Concept2 o similar). El erg es una herramienta clave en mi propio entrenamiento.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Cómo recibo el plan de entrenamiento?</div><div class="faq-a">Tras la suscripción recibirás acceso a una plataforma privada con todos los contenidos, planes semanales, vídeos y herramientas de seguimiento.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Puedo cambiar de plan en cualquier momento?</div><div class="faq-a">Sí. Puedes subir o bajar de plan cuando quieras. No hay permanencias. Solo me escribes y lo gestionamos sin problemas.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Los planes son solo para competición?</div><div class="faq-a">No necesariamente. Trabajo con personas que quieren mejorar su rendimiento en el agua, su condición física general o adoptar hábitos de entrenamiento serios y efectivos.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Hay período de prueba o podemos hablar antes?</div><div class="faq-a">Escríbeme directamente y charlamos sin compromiso. Si tienes dudas sobre qué plan se adapta mejor a ti, te ayudo a elegir el más adecuado.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Necesito un buen nivel para poder acceder?</div><div class="faq-a">Para nada. El objetivo principal de los planes de entrenamiento será el progreso individual de cada uno. Los planes están pensados para ser adaptados al 100% a las necesidades y nivel de cada deportista.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Cómo recibo el plan de entrenamiento?</div><div class="faq-a">Una vez estemos en contacto te mandaré mensualmente los planes vía Mail o Whatsapp.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Los planes son solo para competición?</div><div class="faq-a">No necesariamente. La idea principal es la mejora del rendimiento constante y la preparación de objetivos específicos para cada deportista. Desde mejorar su rendimiento en el agua, su condición física general o adoptar hábitos de entrenamiento serios y efectivos.</div></div>
+      <div class="faq-item"><div class="faq-q">¿La diferencia de nivel o edad implica tener que escoger un plan u otro?</div><div class="faq-a">No. Los 3 planes están diseñados para adaptarse a cualquier nivel y edad. La elección depende únicamente del acompañamiento que necesites. Si buscas mejorar tu técnica en el agua, puedes optar por el plan enfocado en técnica. Si solo necesitas recibir planes de entrenamiento, tienes la opción específica para ello. Y si quieres un seguimiento más completo, combinando técnica y planificación, el plan ideal es el PREMIUM.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Puedo cambiar de plan en cualquier momento?</div><div class="faq-a">Por supuesto. Como la suscripción es mensual no hay ningún problema en si quieres cambiar o cancelar la suscripción en cualquier momento. Me escribes y lo solucionamos.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Hay período de prueba o podemos hablar antes?</div><div class="faq-a">Escríbeme directamente y charlamos sin compromiso. Cualquier duda que tengas te la puedo resolver en menor tiempo posible. Ponte en contacto vía Mail o Instagram.</div></div>
     </div>
 
     
   </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-    <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-    <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-    <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-    <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-  </div>
-  <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
+
 </div>
 
 <script>
@@ -1035,7 +999,7 @@
       <li><strong style="color:var(--white)">Nombre:</strong> Caetano Xosé Horta Pombo</li>
       <li><strong style="color:var(--white)">NIF:</strong> 46095648Z</li>
       <li><strong style="color:var(--white)">Domicilio:</strong> Noia, A Coruña, España</li>
-      <li><strong style="color:var(--white)">Correo:</strong> <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a></li>
+      <li><strong style="color:var(--white)">Correo:</strong> <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a></li>
       <li><strong style="color:var(--white)">Instagram:</strong> <a href="https://instagram.com/caaetano15" target="_blank">@caaetano15</a></li>
     </ul>
     <h2>2. Objeto y ámbito de aplicación</h2>
@@ -1047,23 +1011,6 @@
     <h2>5. Legislación aplicable</h2>
     <p>Este Aviso Legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de A Coruña, con renuncia a cualquier otro fuero.</p>
   </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-    </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
 </div>
 
 <!-- PRIVACIDAD -->
@@ -1076,7 +1023,7 @@
     <ul>
       <li><strong style="color:var(--white)">Identidad:</strong> Caetano Xosé Horta Pombo</li>
       <li><strong style="color:var(--white)">NIF:</strong> 46095648Z</li>
-      <li><strong style="color:var(--white)">Contacto:</strong> <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a></li>
+      <li><strong style="color:var(--white)">Contacto:</strong> <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a></li>
     </ul>
     <h2>2. Datos que se recogen</h2>
     <p>Este sitio web no dispone de formularios de registro ni recoge datos de forma automática. Los únicos datos tratados son los que el usuario facilita voluntariamente al enviar un correo electrónico (nombre, dirección de correo y contenido del mensaje).</p>
@@ -1090,25 +1037,8 @@
     <h2>5. Destinatarios</h2>
     <p>No se cederán datos a terceros salvo obligación legal. Los pagos son gestionados por <strong style="color:var(--white)">Stripe, Inc.</strong> bajo su propia política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a>.</p>
     <h2>6. Derechos del interesado</h2>
-    <p>Puedes ejercer los derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición escribiendo a <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>. También puedes reclamar ante la <strong style="color:var(--white)">Agencia Española de Protección de Datos</strong>: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>.</p>
+    <p>Puedes ejercer los derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición escribiendo a <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>. También puedes reclamar ante la <strong style="color:var(--white)">Agencia Española de Protección de Datos</strong>: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>.</p>
   </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-    </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
 </div>
 
 <!-- COOKIES -->
@@ -1134,23 +1064,6 @@
       <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
     </ul>
   </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-    </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
 </div>
 
 <!-- CONDICIONES -->
@@ -1160,7 +1073,7 @@
     <h1>CONDICIONES DEL <span class="gold">SERVICIO</span></h1>
     <div class="legal-date">Última actualización: mayo 2025</div>
     <h2>1. Objeto</h2>
-    <p>Las presentes condiciones regulan la contratación de los servicios de asesoría técnica y planes de entrenamiento de remo ofrecidos por Caetano Xosé Horta Pombo (NIF: 46095648Z), con domicilio en Noia, A Coruña, España. Contacto: <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>.</p>
+    <p>Las presentes condiciones regulan la contratación de los servicios de asesoría técnica y planes de entrenamiento de remo ofrecidos por Caetano Xosé Horta Pombo (NIF: 46095648Z), con domicilio en Noia, A Coruña, España. Contacto: <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>.</p>
     <h2>2. Servicios y precios</h2>
     <ul>
       <li><strong style="color:var(--white)">Asesorías Técnicas:</strong> 25 € / mes o 30 € por sesión individual. Incluye análisis de vídeo, ejercicios técnicos, ajustes del material y seguimiento básico.</li>
@@ -1172,32 +1085,26 @@
     <h2>4. Precios e impuestos</h2>
     <p>Los precios se expresan en euros (€). En caso de modificación de precios, se notificará con antelación suficiente.</p>
     <h2>5. Derecho de desistimiento</h2>
-    <p>Conforme al Real Decreto Legislativo 1/2007 y la Directiva 2011/83/UE, el usuario tiene derecho a desistir del contrato en un plazo de <strong style="color:var(--white)">14 días naturales</strong> desde la contratación, sin necesidad de justificación, siempre que el servicio no haya comenzado a prestarse con el consentimiento expreso del usuario. Para ejercerlo: <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>.</p>
+    <p>Conforme al Real Decreto Legislativo 1/2007 y la Directiva 2011/83/UE, el usuario tiene derecho a desistir del contrato en un plazo de <strong style="color:var(--white)">14 días naturales</strong> desde la contratación, sin necesidad de justificación, siempre que el servicio no haya comenzado a prestarse con el consentimiento expreso del usuario. Para ejercerlo: <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>.</p>
     <h2>6. Obligaciones del usuario</h2>
     <p>El usuario se compromete a facilitar información veraz sobre su nivel y condición física, y a comunicar cualquier lesión o limitación. Los planes están diseñados para personas sanas; consulta a un médico antes de iniciar si tienes dudas sobre tu salud.</p>
     <h2>7. Propiedad intelectual de los contenidos</h2>
     <p>Todos los planes, vídeos y materiales entregados son de uso exclusivo del contratante. Queda prohibida su reproducción, difusión o comercialización sin autorización escrita.</p>
     <h2>8. Resolución de conflictos</h2>
-    <p>Para cualquier reclamación contacta en <a href="mailto:caetanohorta15@gmail.com">caetanohorta15@gmail.com</a>. En caso de controversia, las partes se someten a los juzgados y tribunales de A Coruña (España).</p>
+    <p>Para cualquier reclamación contacta en <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>. En caso de controversia, las partes se someten a los juzgados y tribunales de A Coruña (España).</p>
   </div>
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico · Noia, Galicia</span></div>
-      <div class="footer-copy">© 2025 Caetano Horta Pombo</div>
-      <div class="footer-social">
-        <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
-        <a href="https://olympics.com/es/atletas/caetano-horta-pombo" target="_blank">Olympics</a>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <a href="#" onclick="showPage('aviso-legal');return false;">Aviso Legal</a>
-      <a href="#" onclick="showPage('privacidad');return false;">Privacidad</a>
-      <a href="#" onclick="showPage('cookies-page');return false;">Cookies</a>
-      <a href="#" onclick="showPage('condiciones');return false;">Condiciones del Servicio</a>
-    </div>
-    <div class="footer-bottom">Noia · Galicia · España · Club do Mar Noia</div>
-  </footer>
 </div>
 
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico Español</span></div>
+    <div class="footer-copy">© 2025 Caetano Horta Pombo · Todos los derechos reservados</div>
+    <div class="footer-social">
+      <a href="https://instagram.com/caaetano15" target="_blank">Instagram</a>
+      <a href="mailto:proyectocaetanohorta@gmail.com">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Proyecto Caetano Horta · A Coruña, España</div>
+</footer>
 </body>
 </html>
