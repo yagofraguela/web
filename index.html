@@ -567,7 +567,7 @@
 </div>
 
 <nav id="navbar">
-  <a href="#" class="logo" onclick="showPage('home');return false;">CAETANO<span> HORTA</span></a>
+  <a href="#" class="logo" onclick="showPage('home');return false;">PROYECTO<span> CAETANO</span></a>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home');return false;" id="nav-home" class="active">Inicio</a></li>
     <li><a href="#" onclick="showPage('profile');return false;" id="nav-profile">Perfil</a></li>
@@ -596,8 +596,8 @@
           <div class="stat-item"><div class="stat-num">6:06</div><div class="stat-label">Récord de España Ligero</div></div>
         </div>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="showPage('profile')">Mi Historia</button>
-          <button class="btn-outline" onclick="showPage('planes')">Ver Planes</button> 
+          <button class="btn-primary" onclick="showPage('profile')">Ver Planes</button>
+          <button class="btn-outline" onclick="showPage('planes')">Mi Historia</button> 
         </div>
       </div>
     </div>
@@ -640,7 +640,8 @@
       <p style="font-size:1rem;color:var(--muted);line-height:1.9;margin-top:16px;">Hoy, todo ese conocimiento se reúne en un método creado para ayudar, acompañar y potenciar el crecimiento de cualquier remero que quiera seguir mejorando y alcanzar su mejor versión.</p>
     </div>
   </section>
-
+
+
 </div>
 
 
@@ -815,10 +816,14 @@
       </div>
     </div>
   </section>
-
+
+
 </div>
 
 
+<!-- ════════════════════ PLANES ════════════════════ -->
+
+ 
 <!-- ════════════════════ PLANES ════════════════════ -->
 <div id="planes" class="page">
   <section id="planes-content">
@@ -842,7 +847,7 @@
           <li>Ayuda con reglajes básicos del barco</li>
           <li>Seguimiento básico de progresión</li>
         </ul>
-        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Asesor%C3%ADas+T%C3%A9cnicas" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="#contacto-form" onclick="preseleccionarPlan('Asesoría Técnica')" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card">
         <div class="plan-name">Planes de Entrenamiento</div>
@@ -855,7 +860,7 @@
           <li>Preparación específica para ergómetro (tips, intensidades, mentalidad...)</li>
           <li>Preparación de objetivos concretos (regatas y test de ergómetro)</li>
         </ul>
-        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Plan+de+Entrenamiento" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="#contacto-form" onclick="preseleccionarPlan('Plan de Entrenamiento')" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge">⭐ Más popular</div>
@@ -870,7 +875,7 @@
           <li>Planificación anual completa</li>
           <li>Trato más personal</li>
         </ul>
-        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Plan+Premium" class="plan-btn plan-btn-filled">Empezar ahora</a>
+        <a href="#contacto-form" onclick="preseleccionarPlan('Plan Premium')" class="plan-btn plan-btn-filled">Empezar ahora</a>
       </div>
     </div>
 <section style="margin:60px 0;padding:50px 40px;background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
@@ -889,22 +894,70 @@
         </div>
       </div>
     </section>
-
-
+ 
+ 
     <div class="otros-servicios" style="margin-top:70px;background:var(--card);border:1px solid var(--border);padding:36px;max-width:800px;margin-left:auto;margin-right:auto;text-align:center;">
       <div class="section-title" style="margin-bottom:10px;">OTROS <span style="color:var(--gold)">SERVICIOS</span></div>
       <p style="color:var(--muted);font-size:.98rem;line-height:1.8;">Con los mismos planes anteriormente mencionados (Asesorías y Planes de Entrenamiento) estoy abierto a trabajar con <strong style="color:var(--white);">clubs o con barcos de equipo concretos</strong> que estén interesados en cualquiera de ellos <strong style="color:var(--gold);">(*precios a consultar en este caso)</strong>.</p>
     </div>
-
-    
-
-    <div class="cta-section" style="margin-top:70px;">
+ 
+ 
+ 
+    <div class="cta-section" style="margin-top:70px;" id="contacto-form">
       <h2>¿LISTO PARA EMPEZAR?</h2>
       <p>No dudes en contactar conmigo para poder resolverte cualquier duda.</p>
-      <a href="mailto:proyectocaetanohorta@gmail.com" class="cta-email">proyectocaetanohorta@gmail.com</a><br><br>
+ 
+      <form name="contacto" method="POST" data-netlify="true" style="max-width:420px;margin:30px auto 0;display:flex;flex-direction:column;gap:16px;text-align:left;">
+        <input type="hidden" name="form-name" value="contacto" />
+ 
+        <input type="text" id="campo-nombre" name="nombre" placeholder="Tu nombre" required
+               style="background:var(--card);border:1px solid var(--border);color:var(--white);padding:14px 16px;font-family:'Rajdhani',sans-serif;font-size:1rem;">
+ 
+        <input type="email" name="email" placeholder="Tu email" required
+               style="background:var(--card);border:1px solid var(--border);color:var(--white);padding:14px 16px;font-family:'Rajdhani',sans-serif;font-size:1rem;">
+ 
+        <select id="campo-plan" name="plan" required
+                style="background:var(--card);border:1px solid var(--border);color:var(--white);padding:14px 16px;font-family:'Rajdhani',sans-serif;font-size:1rem;">
+          <option value="" disabled selected>Elige un plan</option>
+          <option value="Asesoría Técnica">Asesoría Técnica</option>
+          <option value="Plan de Entrenamiento">Plan de Entrenamiento</option>
+          <option value="Plan Premium">Plan Premium</option>
+        </select>
+ 
+        <textarea id="campo-mensaje" name="mensaje" rows="7" required
+                  style="background:var(--card);border:1px solid var(--border);color:var(--white);padding:14px 16px;font-family:'Rajdhani',sans-serif;font-size:1rem;resize:vertical;line-height:1.6;"></textarea>
+ 
+        <button type="submit" class="btn-primary" style="border:none;cursor:pointer;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.82rem;padding:14px;">
+          Enviar
+        </button>
+      </form>
+ 
+      <br>
       <a href="https://instagram.com/caaetano15" target="_blank" class="btn-primary" style="display:inline-block;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.82rem;">Seguirme en Instagram</a>
     </div>
-
+ 
+    <script>
+      function actualizarMensaje() {
+        const nombre = document.getElementById('campo-nombre').value.trim() || '[Nombre]';
+        const plan = document.getElementById('campo-plan').value || '[Plan]';
+        const texto =
+`Hola, Caetano.
+Mi nombre es ${nombre} y me gustaría empezar con el plan de ${plan}.
+Me pongo en contacto contigo para recibir toda la información y comenzar el proceso.
+Muchas gracias.
+Un saludo.`;
+        document.getElementById('campo-mensaje').value = texto;
+      }
+      function preseleccionarPlan(plan) {
+        document.getElementById('campo-plan').value = plan;
+        actualizarMensaje();
+        document.getElementById('contacto-form').scrollIntoView({behavior:'smooth'});
+      }
+      document.getElementById('campo-nombre').addEventListener('input', actualizarMensaje);
+      document.getElementById('campo-plan').addEventListener('change', actualizarMensaje);
+      actualizarMensaje();
+    </script>
+ 
     <div class="section-title">PREGUNTAS <span style="color:var(--gold)">FRECUENTES</span></div>
     <div class="section-sub">Todo lo que necesitas saber antes de empezar</div>
     <div class="faq-grid">
@@ -915,12 +968,13 @@
       <div class="faq-item"><div class="faq-q">¿Puedo cambiar de plan en cualquier momento?</div><div class="faq-a">Por supuesto. Como la suscripción es mensual no hay ningún problema en si quieres cambiar o cancelar la suscripción en cualquier momento. Me escribes y lo solucionamos.</div></div>
       <div class="faq-item"><div class="faq-q">¿Hay período de prueba o podemos hablar antes?</div><div class="faq-a">Escríbeme directamente y charlamos sin compromiso. Cualquier duda que tengas te la puedo resolver en menor tiempo posible. Ponte en contacto vía Mail o Instagram.</div></div>
     </div>
-
-    
+ 
+ 
   </section>
-
+ 
+ 
 </div>
-
+ 
 <script>
   // cursor (only on non-touch devices)
   const cursor = document.getElementById('cursor');
@@ -934,12 +988,12 @@
       el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%,-50%) scale(1)');
     });
   }
-   
+ 
   // nav scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
-
+ 
   // page switch
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -952,7 +1006,7 @@
     });
     window.scrollTo({top:0,behavior:'smooth'});
   }
-
+ 
   // hamburger
     function toggleMobile() {
     const hb = document.getElementById('hamburger');
@@ -970,7 +1024,7 @@
     document.getElementById('mobileOverlay').classList.remove('open');
     document.body.style.overflow = '';
   }
-
+ 
   // ── Cookie banner ──
   function acceptCookies() {
     localStorage.setItem('cookieConsent', 'accepted');
@@ -986,7 +1040,7 @@
     }
   })();
 </script>
-
+ 
 <!-- AVISO LEGAL -->
 <div id="aviso-legal" class="page">
   <div class="legal-page">
@@ -1012,7 +1066,7 @@
     <p>Este Aviso Legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de A Coruña, con renuncia a cualquier otro fuero.</p>
   </div>
 </div>
-
+ 
 <!-- PRIVACIDAD -->
 <div id="privacidad" class="page">
   <div class="legal-page">
@@ -1026,7 +1080,7 @@
       <li><strong style="color:var(--white)">Contacto:</strong> <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a></li>
     </ul>
     <h2>2. Datos que se recogen</h2>
-    <p>Este sitio web no dispone de formularios de registro ni recoge datos de forma automática. Los únicos datos tratados son los que el usuario facilita voluntariamente al enviar un correo electrónico (nombre, dirección de correo y contenido del mensaje).</p>
+    <p>Este sitio web recoge, a través del formulario de contacto y planes, los siguientes datos que el usuario facilita voluntariamente: nombre, dirección de correo electrónico, plan de interés y contenido del mensaje.</p>
     <h2>3. Finalidad y base legal</h2>
     <ul>
       <li><strong style="color:var(--white)">Responder consultas:</strong> base legal — consentimiento del interesado (art. 6.1.a RGPD).</li>
@@ -1035,12 +1089,12 @@
     <h2>4. Conservación de los datos</h2>
     <p>Los datos se conservarán durante el tiempo necesario para atender la consulta o durante la vigencia de la relación contractual, y posteriormente los plazos legalmente establecidos.</p>
     <h2>5. Destinatarios</h2>
-    <p>No se cederán datos a terceros salvo obligación legal. Los pagos son gestionados por <strong style="color:var(--white)">Stripe, Inc.</strong> bajo su propia política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a>.</p>
+    <p>No se cederán datos a terceros salvo obligación legal. El formulario de contacto es gestionado por <strong style="color:var(--white)">Netlify, Inc.</strong> bajo su propia política: <a href="https://www.netlify.com/privacy/" target="_blank">netlify.com/privacy</a>. Los pagos son gestionados por <strong style="color:var(--white)">Stripe, Inc.</strong> bajo su propia política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a>.</p>
     <h2>6. Derechos del interesado</h2>
     <p>Puedes ejercer los derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición escribiendo a <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>. También puedes reclamar ante la <strong style="color:var(--white)">Agencia Española de Protección de Datos</strong>: <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>.</p>
   </div>
 </div>
-
+ 
 <!-- COOKIES -->
 <div id="cookies-page" class="page">
   <div class="legal-page">
@@ -1054,6 +1108,7 @@
     <h2>3. Cookies de terceros</h2>
     <ul>
       <li><strong style="color:var(--white)">Google Fonts</strong> — Proveedor: Google LLC. Finalidad: mostrar las tipografías del sitio. Política: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+      <li><strong style="color:var(--white)">Netlify</strong> (formulario de contacto) — Proveedor: Netlify, Inc. Finalidad: procesar el envío del formulario de contacto. Política: <a href="https://www.netlify.com/privacy/" target="_blank">netlify.com/privacy</a></li>
       <li><strong style="color:var(--white)">Stripe</strong> (solo en páginas de pago) — Proveedor: Stripe, Inc. Finalidad: procesar pagos. Las páginas de pago se sirven desde el dominio de Stripe. Política: <a href="https://stripe.com/es/privacy" target="_blank">stripe.com/es/privacy</a></li>
     </ul>
     <h2>4. Cómo gestionar las cookies</h2>
@@ -1065,7 +1120,7 @@
     </ul>
   </div>
 </div>
-
+ 
 <!-- CONDICIONES -->
 <div id="condiciones" class="page">
   <div class="legal-page">
@@ -1094,7 +1149,7 @@
     <p>Para cualquier reclamación contacta en <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>. En caso de controversia, las partes se someten a los juzgados y tribunales de A Coruña (España).</p>
   </div>
 </div>
-
+ 
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">CAETANO HORTA<span>Remero Olímpico Español</span></div>
