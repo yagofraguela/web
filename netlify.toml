@@ -1,0 +1,39 @@
+# Web estática: Netlify publica la carpeta tal cual, sin compilación.
+[build]
+  publish = "."
+
+# Fotos y tipografías: cambian muy poco, se guardan en caché una semana.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Enlaces antiguos o escritos a mano.
+[[redirects]]
+  from = "/perfil"
+  to = "/perfil/"
+  status = 301
+[[redirects]]
+  from = "/planes"
+  to = "/planes/"
+  status = 301
+[[redirects]]
+  from = "/clubes"
+  to = "/clubes/"
+  status = 301
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 301
+
+# Scripts internos (generan la versión en inglés): no se publican.
+[[redirects]]
+  from = "/herramientas/*"
+  to = "/404.html"
+  status = 404
+  force = true
