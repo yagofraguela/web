@@ -26,3 +26,14 @@
   from = "/clubes"
   to = "/clubes/"
   status = 301
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 301
+
+# Scripts internos (generan la versión en inglés): no se publican.
+[[redirects]]
+  from = "/herramientas/*"
+  to = "/404.html"
+  status = 404
+  force = true

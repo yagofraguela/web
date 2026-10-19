@@ -708,3 +708,9 @@ h1.hero-name { font-size:clamp(2.3rem,5.4vw,5rem); line-height:1.02; letter-spac
   .clubes-hero img { aspect-ratio:16/10; }
 }
 .plan-badge + .plan-name { margin-top:26px; }
+
+/* Selector de idioma */
+.nav-links .lang-link { border:1px solid var(--border); padding:4px 9px; color:var(--silver); }
+.nav-links .lang-link::after { display:none; }
+.nav-links .lang-link:hover { border-color:var(--accent); color:var(--accent); }
+.mobile-menu .lang-link { font-size:1rem; border-bottom:none; color:var(--accent); }
