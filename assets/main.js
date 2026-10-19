@@ -72,18 +72,11 @@ document.querySelectorAll('form.form-contacto').forEach(form => {
   });
 });
 
-// Preselección del plan o la modalidad: botones de la página y enlaces del inicio (?plan=…).
+// Preselección de la modalidad en el formulario de clubes.
 function seleccionar(id, valor) {
   const sel = document.getElementById(id);
   if (sel && [...sel.options].some(o => o.value === valor)) sel.value = valor;
 }
-window.preseleccionarPlan = plan => {
-  seleccionar('campo-plan', plan);
-  document.getElementById('contacto-form').scrollIntoView({ behavior: 'smooth' });
-  return false;
-};
-const planInicial = new URLSearchParams(location.search).get('plan');
-if (planInicial) seleccionar('campo-plan', planInicial);
 document.querySelectorAll('[data-modalidad]').forEach(a => {
   a.addEventListener('click', () => seleccionar('club-modalidad', a.dataset.modalidad));
 });

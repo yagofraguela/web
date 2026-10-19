@@ -59,9 +59,12 @@
       <div class="page-title">PLANES DE <span class="accent">ENTRENAMIENTO</span></div>
       <div class="page-sub">Elige el plan que se adapta a ti</div>
     </div>
+    <div class="planes-top">
     <div class="planes-intro">
       <p>Mi carrera como deportista profesional me ha permitido vivir experiencias únicas y trabajar con metodologías y planes de entrenamiento muy diversos, de los que he ido aprendiendo y extrayendo conocimientos a lo largo de los años.</p>
       <p>Ahora quiero compartir todo ese aprendizaje contigo. No importa si eres principiante, avanzado o si compites a nivel profesional: habrá un plan adaptado a tus objetivos, necesidades y características personales.</p>
+    </div>
+    <figure class="planes-img"><img src="/img/ergometro.webp" alt="Remero entrenando en un ergómetro Concept2" width="1000" height="750" loading="lazy"></figure>
     </div>
     <div class="planes-grid">
       <div class="plan-card">
@@ -75,7 +78,7 @@
           <li>Ayuda con reglajes básicos del barco</li>
           <li>Seguimiento básico de progresión</li>
         </ul>
-        <a href="#contacto-form" data-plan-link onclick="return preseleccionarPlan('Asesoría Técnica')" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Quiero%20empezar%3A%20Asesor%C3%ADa%20t%C3%A9cnica&body=Hola%20Caetano%3A%0A%0AMe%20interesa%20el%20plan%20%C2%ABAsesor%C3%ADa%20t%C3%A9cnica%C2%BB.%0A%0ANombre%3A%0AEdad%3A%0AClub%20y%20pa%C3%ADs%3A%0ANivel%20actual%3A%0AObjetivo%20principal%3A%0A%C2%BFCu%C3%A1ndo%20me%20gustar%C3%ADa%20empezar%3F%3A%0A" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card">
         <div class="plan-name">Planes de Entrenamiento</div>
@@ -88,7 +91,7 @@
           <li>Preparación específica para ergómetro (tips, intensidades, mentalidad...)</li>
           <li>Preparación de objetivos concretos (regatas y test de ergómetro)</li>
         </ul>
-        <a href="#contacto-form" data-plan-link onclick="return preseleccionarPlan('Plan de Entrenamiento')" class="plan-btn plan-btn-outline">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Quiero%20empezar%3A%20Plan%20de%20entrenamiento&body=Hola%20Caetano%3A%0A%0AMe%20interesa%20el%20plan%20%C2%ABPlan%20de%20entrenamiento%C2%BB.%0A%0ANombre%3A%0AEdad%3A%0AClub%20y%20pa%C3%ADs%3A%0ANivel%20actual%3A%0AObjetivo%20principal%3A%0A%C2%BFCu%C3%A1ndo%20me%20gustar%C3%ADa%20empezar%3F%3A%0A" class="plan-btn plan-btn-outline">Empezar ahora</a>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge">⭐ Más popular</div>
@@ -103,7 +106,7 @@
           <li>Planificación anual completa</li>
           <li>Trato más personal</li>
         </ul>
-        <a href="#contacto-form" data-plan-link onclick="return preseleccionarPlan('Plan Premium')" class="plan-btn plan-btn-filled">Empezar ahora</a>
+        <a href="mailto:proyectocaetanohorta@gmail.com?subject=Quiero%20empezar%3A%20Plan%20Premium&body=Hola%20Caetano%3A%0A%0AMe%20interesa%20el%20plan%20%C2%ABPlan%20Premium%C2%BB.%0A%0ANombre%3A%0AEdad%3A%0AClub%20y%20pa%C3%ADs%3A%0ANivel%20actual%3A%0AObjetivo%20principal%3A%0A%C2%BFCu%C3%A1ndo%20me%20gustar%C3%ADa%20empezar%3F%3A%0A" class="plan-btn plan-btn-filled">Empezar ahora</a>
       </div>
     </div>
 <section style="margin:60px 0;padding:50px 40px;background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
@@ -163,6 +166,7 @@
             <option value="Intermedio">Intermedio</option>
             <option value="Avanzado">Avanzado</option>
             <option value="Profesional">Profesional</option>
+            <option value="Máster">Máster (veterano)</option>
           </select>
         </div>
 
@@ -172,15 +176,7 @@
         </div>
 
         <div>
-          <label class="form-label">6. Peso y altura</label>
-          <div class="form-row">
-            <div><input class="form-input" type="number" id="campo-peso" name="peso" min="25" max="200" step="0.1" inputmode="decimal" placeholder="Peso (kg)" required></div>
-            <div><input class="form-input" type="number" id="campo-altura" name="altura" min="100" max="230" step="1" inputmode="numeric" placeholder="Altura (cm)" required></div>
-          </div>
-        </div>
-
-        <div>
-          <label class="form-label" for="campo-plan">7. Plan que deseas</label>
+          <label class="form-label" for="campo-plan">6. Plan que deseas</label>
           <select class="form-input" id="campo-plan" name="plan" required>
             <option value="" disabled selected>Elige un plan</option>
             <option value="Asesoría Técnica">Asesorías Técnicas</option>
@@ -190,16 +186,13 @@
         </div>
 
         <div>
-          <label class="form-label" for="campo-inicio">8. ¿Cuándo te gustaría empezar?</label>
+          <label class="form-label" for="campo-inicio">7. ¿Cuándo te gustaría empezar?</label>
           <input class="form-input" type="text" id="campo-inicio" name="inicio" placeholder="Ej.: cuanto antes, en septiembre, tras la temporada..." required>
         </div>
 
         <div>
-          <label class="form-label">9. Teléfono y correo de contacto</label>
-          <div class="form-row">
-            <div><input class="form-input" type="tel" id="campo-telefono" name="telefono" placeholder="Teléfono" required></div>
-            <div><input class="form-input" type="email" id="campo-email" name="email" placeholder="Correo electrónico" required></div>
-          </div>
+          <label class="form-label" for="campo-email">8. Correo electrónico</label>
+          <input class="form-input" type="email" id="campo-email" name="email" placeholder="Correo electrónico" required>
         </div>
 
         <label class="form-consent">
@@ -207,7 +200,7 @@
           <span>He leído y acepto la <a href="/privacidad/">política de privacidad</a> y el tratamiento de mis datos para responder a esta solicitud.</span>
         </label>
 
-        <div class="form-error" id="form-error">No se ha podido enviar la solicitud. Inténtalo de nuevo en unos minutos o escríbeme por Instagram.</div>
+        <div class="form-error" id="form-error">No se ha podido enviar la solicitud. Inténtalo de nuevo en unos minutos o escríbeme a <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>.</div>
 
         <button type="submit" id="btn-enviar" class="btn-primary" style="border:none;cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.82rem;padding:14px;">
           Enviar
@@ -229,11 +222,12 @@
     <div class="section-sub">Todo lo que necesitas saber antes de empezar</div>
     <div class="faq-grid">
       <div class="faq-item"><div class="faq-q">¿Necesito un buen nivel para poder acceder?</div><div class="faq-a">Para nada. El objetivo principal de los planes de entrenamiento será el progreso individual de cada uno. Los planes están pensados para ser adaptados al 100% a las necesidades y nivel de cada deportista.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Cómo recibo el plan de entrenamiento?</div><div class="faq-a">Una vez estemos en contacto te mandaré mensualmente los planes vía Mail o Whatsapp.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Cómo recibo el plan de entrenamiento?</div><div class="faq-a">Una vez estemos en contacto te mandaré mensualmente los planes por correo electrónico.</div></div>
       <div class="faq-item"><div class="faq-q">¿Los planes son solo para competición?</div><div class="faq-a">No necesariamente. La idea principal es la mejora del rendimiento constante y la preparación de objetivos específicos para cada deportista. Desde mejorar su rendimiento en el agua, su condición física general o adoptar hábitos de entrenamiento serios y efectivos.</div></div>
       <div class="faq-item"><div class="faq-q">¿La diferencia de nivel o edad implica tener que escoger un plan u otro?</div><div class="faq-a">No. Los 3 planes están diseñados para adaptarse a cualquier nivel y edad. La elección depende únicamente del acompañamiento que necesites. Si buscas mejorar tu técnica en el agua, puedes optar por el plan enfocado en técnica. Si solo necesitas recibir planes de entrenamiento, tienes la opción específica para ello. Y si quieres un seguimiento más completo, combinando técnica y planificación, el plan ideal es el PREMIUM.</div></div>
       <div class="faq-item"><div class="faq-q">¿Puedo cambiar de plan en cualquier momento?</div><div class="faq-a">Por supuesto. Como la suscripción es mensual no hay ningún problema en si quieres cambiar o cancelar la suscripción en cualquier momento. Me escribes y lo solucionamos.</div></div>
-      <div class="faq-item"><div class="faq-q">¿Hay período de prueba o podemos hablar antes?</div><div class="faq-a">Escríbeme directamente y charlamos sin compromiso. Cualquier duda que tengas te la puedo resolver en menor tiempo posible. Ponte en contacto vía Mail o Instagram.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Hay período de prueba o podemos hablar antes?</div><div class="faq-a">Escríbeme directamente y charlamos sin compromiso. Cualquier duda que tengas te la puedo resolver en menor tiempo posible. Escríbeme a <a href="mailto:proyectocaetanohorta@gmail.com">proyectocaetanohorta@gmail.com</a>.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Se puede hacer en inglés?</div><div class="faq-a">Sí. Puedo trabajar contigo en español o en inglés: los planes, las correcciones técnicas y el seguimiento.</div></div>
     </div>
  
  
