@@ -34,8 +34,9 @@ hamburger.addEventListener('click', () => setMobile(!mobileMenu.classList.contai
 overlay.addEventListener('click', () => setMobile(false));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') setMobile(false); });
 
-// Formularios (Netlify Forms): envío sin recargar la página.
-document.querySelectorAll('form[data-netlify]').forEach(form => {
+// Formularios (Netlify Forms): envío sin recargar la página. Se buscan por clase
+// porque Netlify quita el atributo data-netlify al publicar.
+document.querySelectorAll('form.form-contacto').forEach(form => {
   const box = form.parentElement;
   const gracias = box.querySelector('.form-gracias');
   const error = form.querySelector('.form-error');
