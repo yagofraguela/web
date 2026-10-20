@@ -208,6 +208,20 @@ T = {
 "6. ¿Qué os gustaría trabajar?": "6. What would you like to work on?", "Técnica, charla motivacional, planificación…": "Technique, a motivational talk, planning…",
 "7. Correo electrónico": "7. Email",
 "¡Gracias! He recibido vuestra solicitud y os escribiré lo antes posible.": "Thank you! I've received your request and will get back to you as soon as possible.",
+# ---------- Fotos (octubre 2026) ----------
+"Caetano Horta celebra con el puño en alto en su skiff": "Caetano Horta celebrating with a raised fist in his single scull",
+"Caetano Horta Pombo remando en skiff": "Caetano Horta Pombo rowing a single scull",
+"Juegos Olímpicos de París 2024, doble scull ligero": "Paris 2024 Olympic Games, lightweight double sculls",
+"Concentración antes de la salida": "Focus before the start",
+"Cuatro scull en el Mundial de Shanghai 2025": "Quadruple sculls at the 2025 World Championships in Shanghai",
+"Doble scull de frente en plena regata": "Double sculls racing, head-on view",
+"Celebración con la bandera de España en Belgrado": "Celebrating with the Spanish flag in Belgrade",
+"Doble scull en el Campeonato de Europa": "Double sculls at the European Championships",
+"Caetano Horta Pombo en skiff": "Caetano Horta Pombo in the single scull",
+"Entrenamiento en doble scull": "Double sculls training",
+"Celebración en el agua tras una regata": "Celebrating on the water after a race",
+"Embarcando en el doble scull": "Getting into the double scull",
+"Skiff de frente al amanecer en un entrenamiento": "Single scull head-on at dawn during training",
 }
 # Textos que no se traducen (nombres, cifras, emojis).
 KEEP = {".", "EN", "English", "ES", "Español", "PROYECTO", "CAETANO", "2×", "🥇", "15×", "6:06", "🏅", "⚡", "🥈", "Proyecto Caetano", "25 €", "50 €", "Premium", "65 €", "300 €",

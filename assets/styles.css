@@ -714,3 +714,20 @@ h1.hero-name { font-size:clamp(2.3rem,5.4vw,5rem); line-height:1.02; letter-spac
 .nav-links .lang-link::after { display:none; }
 .nav-links .lang-link:hover { border-color:var(--accent); color:var(--accent); }
 .mobile-menu .lang-link { font-size:1rem; border-bottom:none; color:var(--accent); }
+
+/* Portada con la foto del skiff (octubre 2026): más luminosa y con versión vertical para móvil. */
+.hero-bg { filter:brightness(.62) saturate(.9); background-position:center 55%; }
+.hero-overlay { background:linear-gradient(to top,rgba(10,11,12,.92) 0%,rgba(10,11,12,.45) 45%,rgba(10,11,12,.1) 100%), linear-gradient(to right,rgba(10,11,12,.55) 0%,transparent 60%); }
+@media (max-width:768px) {
+  .hero-bg { background-image:url('/img/hero-movil.webp'); background-position:center 40%; }
+}
+.gallery { grid-auto-flow:dense; }
+.quote-bg { filter:brightness(.4) saturate(.7); }
+/* Móvil: la foto arriba (sin texto encima) y el titular debajo. */
+@media (max-width:768px) {
+  .hero-section { display:block; min-height:0; padding-top:0; }
+  .hero-bg { position:relative; height:min(118vw,72svh); filter:brightness(.9) saturate(.95); animation:none; }
+  .hero-overlay { inset:auto 0 auto 0; top:0; height:min(118vw,72svh); background:linear-gradient(to bottom,rgba(10,11,12,.55) 0%,transparent 22%,transparent 70%,#0a0b0c 100%); }
+  .hero-content { margin-top:-48px; padding-bottom:44px; }
+  .hero-logo { display:none; }
+}
