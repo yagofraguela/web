@@ -714,3 +714,72 @@ h1.hero-name { font-size:clamp(2.3rem,5.4vw,5rem); line-height:1.02; letter-spac
 .nav-links .lang-link::after { display:none; }
 .nav-links .lang-link:hover { border-color:var(--accent); color:var(--accent); }
 .mobile-menu .lang-link { font-size:1rem; border-bottom:none; color:var(--accent); }
+
+/* Portada con la foto del skiff (octubre 2026): más luminosa y con versión vertical para móvil. */
+.hero-bg { filter:brightness(.62) saturate(.9); background-position:center 55%; }
+.hero-overlay { background:linear-gradient(to top,rgba(10,11,12,.92) 0%,rgba(10,11,12,.45) 45%,rgba(10,11,12,.1) 100%), linear-gradient(to right,rgba(10,11,12,.55) 0%,transparent 60%); }
+@media (max-width:768px) {
+  .hero-bg { background-image:url('/img/hero-movil.webp'); background-position:center 40%; }
+}
+.gallery { grid-auto-flow:dense; }
+.quote-bg { filter:brightness(.4) saturate(.7); }
+/* Móvil: la foto arriba (sin texto encima) y el titular debajo. */
+@media (max-width:768px) {
+  .hero-section { display:block; min-height:0; padding-top:0; }
+  .hero-bg { position:relative; height:min(118vw,72svh); filter:brightness(.9) saturate(.95); animation:none; }
+  .hero-overlay { inset:auto 0 auto 0; top:0; height:min(118vw,72svh); background:linear-gradient(to bottom,rgba(10,11,12,.55) 0%,transparent 22%,transparent 70%,#0a0b0c 100%); }
+  .hero-content { margin-top:-48px; padding-bottom:44px; }
+  .hero-logo { display:none; }
+}
+
+/* ══ Ajustes de fotos e iconos (20 oct 2026) ══ */
+/* Las fotos ya no se estiran: altura automática y recorte proporcionado. */
+.intro-section { grid-template-columns:1.1fr 1fr; gap:70px; max-width:1240px; margin:0 auto; }
+.intro-img img { height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 30%; }
+.profile-grid { grid-template-columns:minmax(300px,420px) 1fr; }
+.profile-img { height:auto; aspect-ratio:2/3; object-fit:cover; object-position:center 35%; }
+/* Frase: la foto del skiff centrada y el texto encima del barco, no sobre él. */
+.quote-section { height:auto; min-height:760px; align-items:flex-start; padding-top:36px; }
+.quote-bg { background-position:center bottom; filter:brightness(.55) saturate(.8); }
+/* Iconos sobrios en lugar de emojis. */
+.hl-icon { width:26px; height:26px; color:var(--accent); display:grid; place-items:center; }
+.hl-icon svg { width:100%; height:100%; }
+.logro-medal { display:inline-block; font-family:'Montserrat',sans-serif; font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); border:1px solid var(--accent); padding:4px 10px; margin-bottom:14px; }
+@media (max-width:768px) {
+  .intro-section { grid-template-columns:1fr; gap:32px; }
+  .intro-img { display:block; order:-1; }
+  .intro-img img { aspect-ratio:4/5; max-height:70svh; }
+  .profile-grid { grid-template-columns:1fr; }
+  .profile-img-wrap { display:block; max-width:420px; }
+  .quote-section { min-height:420px; padding:48px 20px 0; }
+  .quote-bg { background-position:center 70%; }
+}
+/* Destacados del inicio: cuatro en una fila en ordenador. */
+.highlights { display:grid; grid-template-columns:repeat(4,1fr); gap:0; }
+.hl-item { margin-right:0; padding:0 24px; }
+.hl-item:first-child { padding-left:0; }
+@media (max-width:1024px) { .highlights { grid-template-columns:repeat(2,1fr); row-gap:18px; } .hl-item:nth-child(2n) { border-right:none; } .hl-item:nth-child(2n+1) { padding-left:0; } }
+@media (max-width:768px) { .highlights { grid-template-columns:1fr; } .hl-item { padding:13px 0; } }
+
+/* Colaborador: Álvaro Coca (planes) y franja en el inicio */
+.colaborador { display:grid; grid-template-columns:minmax(260px,380px) 1fr; gap:60px; align-items:center; margin:20px auto 70px; max-width:1100px; scroll-margin-top:100px; }
+.colab-img { position:relative; }
+.colab-img img { width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; display:block; clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px)); }
+.colab-img::after { content:''; position:absolute; inset:-8px; border:1px solid rgba(216,248,24,.3); pointer-events:none; }
+.colab-text .section-eyebrow { font-family:'Montserrat',sans-serif; font-size:.75rem; letter-spacing:4px; color:var(--accent); text-transform:uppercase; margin-bottom:12px; }
+.colab-text > p { color:var(--muted); line-height:1.8; margin:16px 0 22px; }
+.colab-list { list-style:none; display:grid; gap:14px; }
+.colab-list li { display:flex; gap:14px; align-items:center; color:var(--white); font-size:.95rem; line-height:1.5; }
+.colab-icon { flex:none; width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--accent); color:var(--accent); }
+.colab-icon svg { width:22px; height:22px; }
+.colab-quote { margin-top:24px; font-family:'Montserrat',sans-serif; font-size:.8rem; letter-spacing:.2em; text-transform:uppercase; color:var(--silver); }
+.equipo-strip { display:flex; align-items:center; gap:24px; max-width:1120px; margin:0 auto; padding:22px 28px; border:1px solid var(--border); background:var(--card); }
+.equipo-strip img { width:72px; height:72px; object-fit:cover; object-position:center 30%; border-radius:50%; border:2px solid var(--accent); flex:none; }
+.equipo-strip p { flex:1; color:var(--muted); line-height:1.6; }
+.equipo-strip strong { color:var(--white); }
+@media (max-width:768px) {
+  .colaborador { grid-template-columns:1fr; gap:30px; }
+  .colab-img { max-width:360px; }
+  .equipo-strip { flex-wrap:wrap; margin:0 20px; padding:20px; }
+  .equipo-strip .btn-outline { width:100%; }
+}
