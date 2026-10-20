@@ -87,7 +87,7 @@ for es_path, en_path in PAGES.items():
     en = head + "<body>" + body
     # Enlaces internos a la versión inglesa (las páginas legales siguen en español).
     for es_p, en_p in PAGES.items():
-        en = en.replace(f'href="{es_p}"', f'href="{en_p}"')
+        en = en.replace(f'href="{es_p}"', f'href="{en_p}"').replace(f'href="{es_p}#', f'href="{en_p}#')
     en = re.sub(r'<a class="lang-link" href="/en/[^"]*" hreflang="en" lang="en" aria-label="English">EN</a>',
                 f'<a class="lang-link" href="{es_path}" hreflang="es" lang="es" aria-label="Español">ES</a>', en)
     en = re.sub(r'<link rel="alternate" hreflang="es" href="[^"]*">', f'<link rel="alternate" hreflang="es" href="{SITE}{es_path}">', en)

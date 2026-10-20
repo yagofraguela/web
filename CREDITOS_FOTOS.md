@@ -16,3 +16,4 @@ Las fotos de Caetano son propias. Estas cuatro son de [Unsplash](https://unsplas
 | `img/perfil.webp` | Perfil · foto principal | Fotografía Yeyo (marca de agua en la foto) |
 | `img/g-entreno.webp` | Galería | Fotografía Yeyo (marca de agua en la foto) |
 | `img/hero.webp`, `img/hero-movil.webp`, `img/intro.webp`, `img/quote.webp`, resto de `img/g-*.webp` | Portada, inicio y galería | Cedidas por Caetano, libres de derechos (confirmado por él el 20 oct 2026) |
+| `img/alvaro-coca.webp`, `img/alvaro-avatar.webp` | Planes e inicio · Álvaro Coca | Cedida por Caetano para presentar al colaborador |

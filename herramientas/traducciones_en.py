@@ -222,6 +222,20 @@ T = {
 "Celebración en el agua tras una regata": "Celebrating on the water after a race",
 "Embarcando en el doble scull": "Getting into the double scull",
 "Skiff de frente al amanecer en un entrenamiento": "Single scull head-on at dawn during training",
+# ---------- Colaborador ----------
+"Álvaro Coca, preparador físico, en el gimnasio": "Álvaro Coca, strength and conditioning coach, in the gym",
+"Colaborador · Preparación física": "Collaborator · Strength and conditioning",
+"ÁLVARO": "ÁLVARO", "COCA": "COCA",
+"Álvaro se incorpora a Proyecto Caetano para diseñar la parte de fuerza y preparación física de los planes. Aporta conocimiento, experiencia y una visión profesional de la preparación física aplicada al remo.": "Álvaro joins Proyecto Caetano to design the strength and conditioning side of the plans. He brings knowledge, experience and a professional approach to physical preparation for rowing.",
+"Licenciado en Ciencias de la Actividad Física y del Deporte (INEF)": "Degree in Physical Activity and Sport Sciences (INEF)",
+"Máster en Alto Rendimiento Deportivo": "Master's in High-Performance Sport",
+"Preparador físico del Equipo Nacional Español de Remo": "Strength and conditioning coach of the Spanish National Rowing Team",
+"Amplia experiencia en preparación física y alto rendimiento": "Extensive experience in strength, conditioning and high performance",
+"Experiencia al más alto nivel al servicio de tu entrenamiento.": "Top-level experience at the service of your training.",
+"Preparación física": "Strength and conditioning",
+"Preparación física con Álvaro Coca": "Strength and conditioning with Álvaro Coca",
+", preparador físico del Equipo Nacional Español de Remo. Diseña conmigo la parte de fuerza de los planes.": ", strength and conditioning coach of the Spanish National Rowing Team. He designs the strength side of the plans with me.",
+"Conócelo": "Meet him",
 }
 # Textos que no se traducen (nombres, cifras, emojis).
 KEEP = {".", "EN", "English", "ES", "Español", "PROYECTO", "CAETANO", "2×", "🥇", "15×", "6:06", "🏅", "⚡", "🥈", "Proyecto Caetano", "25 €", "50 €", "Premium", "65 €", "300 €",
