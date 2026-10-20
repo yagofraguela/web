@@ -128,7 +128,7 @@ T = {
 "Feedback semanal": "Weekly feedback",
 "Preparación específica para ergómetro (tips, intensidades, mentalidad...)": "Erg-specific preparation (tips, intensities, mindset...)",
 "Preparación de objetivos concretos (regatas y test de ergómetro)": "Preparation for specific goals (regattas and erg tests)",
-"⭐ Más popular": "⭐ Most popular", "Plan Premium": "Premium Plan",
+"⭐ Más popular": "⭐ Most popular", "Más popular": "Most popular", "4.º": "4th", "8.º": "8th", "5.º": "5th", "Oro": "Gold", "Plata": "Silver", "Diploma": "Diploma", "Medalla": "Medal", "Récord": "Record", "Noia, Galicia · Club do Mar Noia": "Noia, Galicia · Club do Mar Noia", "Plan Premium": "Premium Plan",
 "Incluye ambos planes (asesorías técnicas + planes de entrenamiento)": "Includes both plans (technique coaching + training plans)",
 "Seguimiento más profundo y continuo": "Closer, ongoing follow-up", "Análisis de vídeo ilimitado": "Unlimited video analysis",
 "Planificación anual completa": "Full season planning", "Trato más personal": "More personal attention",
